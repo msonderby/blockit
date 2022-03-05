@@ -1,4 +1,6 @@
-# 🏗 Scaffold-ETH
+# Blockit.finance
+
+![logo512](https://user-images.githubusercontent.com/74756790/156865888-2f92427e-c33c-44ea-8ee9-68db6988b83a.png)
 
 > everything you need to build on Ethereum! 🚀
 
