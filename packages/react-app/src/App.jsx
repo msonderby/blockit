@@ -31,6 +31,7 @@ import deployedContracts from "./contracts/hardhat_contracts.json";
 import { Transactor, Web3ModalSetup } from "./helpers";
 import { Home, ExampleUI, Hints, Subgraph } from "./views";
 import { useStaticJsonRPC } from "./hooks";
+import logo from './Images/logo256.png';
 
 const { ethers } = require("ethers");
 /*
@@ -246,7 +247,7 @@ function App(props) {
 
   return (
     <div className="App">
-      {/* ✏️ Edit the header and change the title to your project name */}
+      {/* ✏️ Edit the header and change the title to your project name */} <img src={logo} alt="Logo" height={50} align="left" marginRight={20}/> 
       <Header />
       <NetworkDisplay
         NETWORKCHECK={NETWORKCHECK}
@@ -256,24 +257,42 @@ function App(props) {
         logoutOfWeb3Modal={logoutOfWeb3Modal}
         USE_NETWORK_SELECTOR={USE_NETWORK_SELECTOR}
       />
-      <Menu style={{ textAlign: "center", marginTop: 40 }} selectedKeys={[location.pathname]} mode="horizontal">
+      <Menu style={{ textAlign: "center", marginTop: 0 }} selectedKeys={[location.pathname]} img src={logo} mode="horizontal">
+        <Menu.Item key="/positions">
+          <Link to="/positions">Your Positions</Link>
+        </Menu.Item>
+        <Menu.Item key="/browse">
+          <Link to="/browse">Browse Opportunities</Link>
+        </Menu.Item>
+        <Menu.Item key="/manageassets">
+          <Link to="/manageassets">Manage Assets</Link>
+        </Menu.Item>
+        <Menu.Item key="/verify">
+          <Link to="/verify">Verification Docs</Link>
+        </Menu.Item>
+        <Menu.Item key="/exchange">
+          <Link to="/exchange">Exchange</Link>
+        </Menu.Item>
+        <Menu.Item key="/liquiditypool">
+          <Link to="/liquiditypool">Liquidity Pool</Link>
+        </Menu.Item>
         <Menu.Item key="/">
-          <Link to="/">App Home</Link>
+          <Link to="/">🛠 🏗️ scaffold-eth</Link>
         </Menu.Item>
         <Menu.Item key="/debug">
-          <Link to="/debug">Debug Contracts</Link>
+          <Link to="/debug">🛠 Debug Contracts</Link>
         </Menu.Item>
         <Menu.Item key="/hints">
-          <Link to="/hints">Hints</Link>
+          <Link to="/hints">🛠 Hints</Link>
         </Menu.Item>
         <Menu.Item key="/exampleui">
-          <Link to="/exampleui">ExampleUI</Link>
+          <Link to="/exampleui">🛠 ExampleUI</Link>
         </Menu.Item>
         <Menu.Item key="/mainnetdai">
-          <Link to="/mainnetdai">Mainnet DAI</Link>
+          <Link to="/mainnetdai">🛠 Mainnet DAI</Link>
         </Menu.Item>
         <Menu.Item key="/subgraph">
-          <Link to="/subgraph">Subgraph</Link>
+          <Link to="/subgraph">🛠 Subgraph</Link>
         </Menu.Item>
       </Menu>
 
